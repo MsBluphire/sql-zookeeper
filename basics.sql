@@ -1,4 +1,4 @@
-SQL Basics -- Challenge 0
+--SQL Basics -- Challenge 0
 SELECT population FROM world
   WHERE name = 'Germany'
   
@@ -8,7 +8,7 @@ SELECT population FROM world
   SELECT name, area FROM world
   WHERE area BETWEEN 200000 AND 250000
   
-  SQL Select Name -- Challenge 1
+ -- SQL Select Name -- Challenge 1
   SELECT name FROM world
   WHERE name LIKE 'Y%'
   
@@ -40,7 +40,7 @@ SELECT name FROM world
  SELECT name FROM world
  WHERE name LIKE '____'
  
- SQL SELECT From World -- Challenge 2
+ --SQL SELECT From World -- Challenge 2
  
  SELECT name, continent, population FROM world
  
@@ -70,3 +70,24 @@ WHERE continent = 'South America'
 
 SELECT name, ROUND(gdp/population,-3) FROM world
 WHERE gdp>1000000000000
+
+-- SQL Select From Nobel -- Challenge 3
+
+SELECT yr, subject, winner
+  FROM nobel
+ WHERE yr = 1950
+ 
+ SELECT winner
+  FROM nobel
+ WHERE yr = 1962
+   AND subject = 'Literature'
+   
+   SELECT yr, subject
+  FROM nobel
+WHERE winner = 'Albert Einstein'
+
+ SELECT winner FROM nobel
+WHERE subject = 'Peace' AND yr >=2000
+
+SELECT yr, subject, winner FROM nobel
+WHERE subject = 'Literature' AND yr between 1980 and 1989
